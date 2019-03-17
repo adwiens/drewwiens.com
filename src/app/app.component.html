@@ -1,11 +1,23 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a routerLink="/articles" routerLinkActive="underline">Articles</a>
-    <a routerLink="/videos" routerLinkActive="underline">Videos</a>
-    <a routerLink="/speaking" routerLinkActive="underline">Speaking</a>
-    <a routerLink="/teaching" routerLinkActive="underline">Teaching</a>
-    <a routerLink="/links" routerLinkActive="underline">Links</a>
+    an[d]ev
+    <nav class="tabs">
+      <a mat-button routerLink="/articles" routerLinkActive="active">Articles</a>
+      <a mat-button routerLink="/videos" routerLinkActive="active">Videos</a>
+      <a mat-button routerLink="/speaking" routerLinkActive="active">Speaking</a>
+      <a mat-button routerLink="/teaching" routerLinkActive="active">Teaching</a>
+      <a mat-button routerLink="/links" routerLinkActive="active">Links</a>
+    </nav>
+    <nav>
+      <a mat-button href="http://www.github.com/adwiens" target="_blank">
+        GitHub <mat-icon>open_in_new</mat-icon>
+      </a>
+    </nav>
   </mat-toolbar-row>
 </mat-toolbar>
+<div class="badge">
+  <img src="assets/images/me.PNG">
+  <span>My name is Andy Wiens. Software Developer at Oasis Digital. Angular Boot Camp instructor. CS PhD student.</span>
+</div>
 
 <router-outlet></router-outlet>
