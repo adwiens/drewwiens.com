@@ -1,0 +1,26 @@
+mat-toolbar-row {
+  display: flex;
+  justify-content: center;
+  a {
+    padding: 0 50px;
+    text-decoration: none;
+    color: #a1aadd;
+  }
+  a.underline {
+    border: 0;
+    border-bottom: 3px;
+    border-color: white;
+    border-style: solid;
+    padding-bottom: 13px;
+    padding-top: 16px;
+    color: white;
+  }
+  a:hover:not(.underline) {
+    border: 0;
+    border-bottom: 3px;
+    border-color: #a1aadd;
+    border-style: solid;
+    padding-bottom: 13px;
+    padding-top: 16px;
+  }
+}

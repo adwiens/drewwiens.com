@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "andev-us": {
+    "andev": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "andev",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/andev-us",
+            "outputPath": "dist/andev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "andev-us:build"
+            "browserTarget": "andev:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "andev-us:build:production"
+              "browserTarget": "andev:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "andev-us:build"
+            "browserTarget": "andev:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "andev-us-e2e": {
+    "andev-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "andev-us:serve"
+            "devServerTarget": "andev:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "andev-us:serve:production"
+              "devServerTarget": "andev:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "andev-us"
+  "defaultProject": "andev"
 }

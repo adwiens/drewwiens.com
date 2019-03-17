@@ -1,0 +1,5 @@
+{
+  "sort-imports.default-sort-style": "module",
+  "typescript.tsdk": "client\\node_modules\\typescript\\lib",
+  "editor.rulers": [100]
+}
