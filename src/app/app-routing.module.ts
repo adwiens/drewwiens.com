@@ -1,13 +1,49 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
   { path: '', redirectTo: 'articles', pathMatch: 'full' },
-  { path: 'articles', loadChildren: './articles/articles.module#ArticlesModule' },
-  { path: 'videos', loadChildren: './videos/videos.module#VideosModule' },
-  { path: 'speaking', loadChildren: './speaking/speaking.module#SpeakingModule' },
-  { path: 'teaching', loadChildren: './teaching/teaching.module#TeachingModule' },
-  { path: 'links', loadChildren: './links/links.module#LinksModule' },
+  {
+    path: 'articles',
+    loadChildren: './articles/articles.module#ArticlesModule',
+    canActivate: [ MetaGuard ],
+    data: {
+      meta: { title: 'Articles and Papers | Andy Wiens' },
+    },
+  },
+  {
+    path: 'videos',
+    loadChildren: './videos/videos.module#VideosModule',
+    canActivate: [ MetaGuard ],
+    data: {
+      meta: { title: 'Videos | Andy Wiens' },
+    },
+  },
+  {
+    path: 'speaking',
+    loadChildren: './speaking/speaking.module#SpeakingModule',
+    canActivate: [ MetaGuard ],
+    data: {
+      meta: { title: 'Speaking | Andy Wiens' },
+    },
+  },
+  {
+    path: 'teaching',
+    loadChildren: './teaching/teaching.module#TeachingModule',
+    canActivate: [ MetaGuard ],
+    data: {
+      meta: { title: 'Teaching | Andy Wiens' },
+    },
+  },
+  {
+    path: 'links',
+    loadChildren: './links/links.module#LinksModule',
+    canActivate: [ MetaGuard ],
+    data: {
+      meta: { title: 'Links | Andy Wiens' },
+    },
+  },
 ];
 
 @NgModule({
