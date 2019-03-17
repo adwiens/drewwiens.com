@@ -1,6 +1,6 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="header">
   <mat-toolbar-row>
-    an[d]ev
+    <h1>an[d]ev</h1>
     <nav class="tabs">
       <a mat-button routerLink="/articles" routerLinkActive="active">Articles</a>
       <a mat-button routerLink="/videos" routerLinkActive="active">Videos</a>
@@ -9,15 +9,34 @@
       <a mat-button routerLink="/links" routerLinkActive="active">Links</a>
     </nav>
     <nav>
-      <a mat-button href="http://www.github.com/adwiens" target="_blank">
-        GitHub <mat-icon>open_in_new</mat-icon>
-      </a>
+      <a mat-button href="http://www.github.com/adwiens" target="_blank">GitHub</a>
     </nav>
   </mat-toolbar-row>
 </mat-toolbar>
-<div class="badge">
-  <img src="assets/images/me.PNG">
-  <span>My name is Andy Wiens. Software Developer at Oasis Digital. Angular Boot Camp instructor. CS PhD student.</span>
+
+<div class="content">
+  <div class="badge">
+    <img src="assets/images/me.PNG">
+    <span>
+      My name is Andy Wiens.
+      Software Developer at Oasis Digital.
+      Angular Boot Camp instructor.
+      CS PhD student.
+    </span>
+  </div>
+  <router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+<mat-toolbar class="footer">
+  <mat-toolbar-row>
+    <nav>
+      <a mat-button href="http://www.twitter.com/adwiens" target="_blank">Twitter</a>
+      <a mat-button href="http://www.github.com/adwiens" target="_blank">GitHub</a>
+      <a mat-button href="http://www.stackblitz.com/@adwiens" target="_blank">Stackblitz</a>
+      <a mat-button href="https://scholar.google.com/citations?user=_N2X7KwAAAAJ" target="_blank">
+        Google Scholar
+      </a>
+    </nav>
+    <span class="small">Powered by Angular Universal and Express</span>
+  </mat-toolbar-row>
+</mat-toolbar>

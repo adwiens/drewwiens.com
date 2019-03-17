@@ -1,28 +1,17 @@
 // todo: use Material theming
 // https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
-mat-toolbar-row {
-  display: flex;
-  justify-content: space-between;
-  nav.tabs {
-    a {
-      color: #a1aadd;
+.header {
+  mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    nav.tabs {
+      a {
+        color: #a1aadd;
+      }
+      a.active {
+        color: white;
+      }
     }
-    a.active {
-      color: white;
-    }
-  }
-}
-
-div.badge {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  max-width: 500px;
-  img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 25px;
   }
 }
 
@@ -32,7 +21,33 @@ div.badge {
   align-items: center;
 }
 
-.main {
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1 0 auto;
   width: 100%;
+  min-height: calc(100vh - 2*64px);
+  .badge {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    img {
+      height: 80px;
+      flex: 0 0 80px;
+      border-radius: 50%;
+      margin-right: 25px;
+    }
+  }
+}
+
+.footer {
+  mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    .small {
+      font-size: small;
+    }
+  }
 }
