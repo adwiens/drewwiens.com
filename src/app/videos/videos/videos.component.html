@@ -1,3 +1,28 @@
-<p>
-  videos works!
-</p>
+<mat-card *ngFor="let post of posts">
+  <mat-card-header>
+    <mat-card-title>
+      <a *ngIf="post.link.startsWith('http'); else relative" [href]="post.link">{{ post.title }}</a>
+      <ng-template #relative><a [routerLink]="post.link">{{ post.title }}</a></ng-template>
+    </mat-card-title>
+    <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
+    <img mat-card-avatar [src]="'assets/images/' + post.avatarFilename">
+  </mat-card-header>
+  <img mat-card-image [src]="'assets/images/' + post.imageFilename">
+  <mat-card-content>{{ post.description }}</mat-card-content>
+  <mat-card-actions>
+    <ng-container *ngIf="post.extraLinks as extras">
+      <ng-container *ngFor="let extra of extras">
+        <a mat-button *ngIf="extra.link.startsWith('http'); else relative" [href]="extra.link">
+          {{ extra.label }}
+        </a>
+        <ng-template #relative>
+          <a mat-button [routerLink]="extra.link">{{ extra.label }}</a>
+        </ng-template>
+      </ng-container>
+    </ng-container>
+    <a mat-button *ngIf="post.link.startsWith('http'); else relative" [href]="post.link">
+      Open Video
+    </a>
+    <ng-template #relative><a mat-button [routerLink]="post.link">Open Video</a></ng-template>
+  </mat-card-actions>
+</mat-card>
