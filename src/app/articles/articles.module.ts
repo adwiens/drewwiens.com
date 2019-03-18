@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ArticlesComponent } from './articles/articles.component';
+import { MaterialModule } from '../material.module';
 
 const routes: Routes = [
   { path: '', component: ArticlesComponent, pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialModule,
   ]
 })
 export class ArticlesModule { }

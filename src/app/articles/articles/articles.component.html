@@ -1,3 +1,17 @@
-<p>
-  articles works!
-</p>
+<mat-card *ngFor="let post of posts">
+  <mat-card-header>
+    <mat-card-title>
+      <a *ngIf="post.link.startsWith('http'); else relative" [href]="post.link">{{ post.title }}</a>
+      <ng-template #relative><a [routerLink]="post.link">{{ post.title }}</a></ng-template>
+    </mat-card-title>
+    <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
+    <img mat-card-avatar [src]="'assets/images/' + post.imageFilename">
+  </mat-card-header>
+  <mat-card-content>{{ post.description }}</mat-card-content>
+  <mat-card-actions>
+    <a mat-button *ngIf="post.link.startsWith('http'); else relative" [href]="post.link">
+      See More
+    </a>
+    <ng-template #relative><a mat-button [routerLink]="post.link">See More</a></ng-template>
+  </mat-card-actions>
+</mat-card>
