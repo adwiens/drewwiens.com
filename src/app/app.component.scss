@@ -2,19 +2,25 @@
 // https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
 .header {
   mat-toolbar-row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     a {
       text-decoration: none;
       color: white;
     }
-    nav.tabs {
+    .tabs {
+      display: flex;
+      justify-content: center;
       a {
         color: #a1aadd;
       }
       a.active {
         color: white;
       }
+    }
+    .links {
+      display: flex;
+      justify-content: flex-end;
     }
     h1 {
       display: flex;
