@@ -30,8 +30,8 @@ export class VideosComponent {
     {
       title: 'Add Drag-and-Drop with Angular Material CDK 7',
       date: 'Feb 5, 2019',
-      description: 'How to add drag-and-drop capability to an Angular application with the ' +
-      'Material CDK 7 drag-drop library. At WindyCity Dev Fest 2019.',
+      description: 'How to add drag-and-drop to an Angular application with the ' +
+        'Material CDK 7 drag-drop library. At WindyCity Dev Fest 2019.',
       imageFilename: 'dragdropwindycity.png',
       avatarFilename: 'angular-logo.png',
       link: 'https://www.youtube.com/watch?v=UBbI6-QTdec',
@@ -51,7 +51,7 @@ export class VideosComponent {
     {
       title: 'Add Drag-and-Drop with Angular Material CDK 6 Experimental',
       date: 'Sep 25, 2018',
-      description: 'How to add drag-and-drop capability to an Angular application with the ' +
+      description: 'How to add drag-and-drop to an Angular application with the ' +
         'experimental Material CDK 6 drag-drop library.',
       imageFilename: 'dragdropvid1.png',
       avatarFilename: 'angular-logo.png',

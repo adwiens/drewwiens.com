@@ -32,7 +32,7 @@ export class ArticlesComponent {
       link: 'https://blog.oasisdigital.com/2017/angular-runtime-performance-guide/',
     },
     {
-      title: 'How to Learn Angular Without Experience',
+      title: 'How to Learn Angular Without Web Development Experience',
       date: 'September 16, 2017',
       description: 'Tips on how to learn Angular without experience with JavaScript or other ' +
         'front-end technologies.',

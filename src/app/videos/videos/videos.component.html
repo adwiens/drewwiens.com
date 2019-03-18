@@ -7,7 +7,14 @@
     <mat-card-subtitle>{{ post.date }}</mat-card-subtitle>
     <img mat-card-avatar [src]="'assets/images/' + post.avatarFilename">
   </mat-card-header>
-  <img mat-card-image [src]="'assets/images/' + post.imageFilename">
+  <a *ngIf="post.link.startsWith('http'); else relative" [href]="post.link">
+    <img mat-card-image [src]="'assets/images/' + post.imageFilename">
+  </a>
+  <ng-template #relative>
+    <a [routerLink]="post.link">
+      <img mat-card-image [src]="'assets/images/' + post.imageFilename">
+    </a>
+  </ng-template>
   <mat-card-content>{{ post.description }}</mat-card-content>
   <mat-card-actions>
     <ng-container *ngIf="post.extraLinks as extras">

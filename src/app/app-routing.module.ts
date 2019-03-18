@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'articles', pathMatch: 'full' },
+  { path: '', redirectTo: 'videos', pathMatch: 'full' },
   {
     path: 'articles',
     loadChildren: './articles/articles.module#ArticlesModule',

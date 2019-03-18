@@ -12,6 +12,11 @@
 mat-card {
   display: flex;
   flex-direction: column;
+  a {
+    img {
+      margin-top: 0; // for material bug: making a card image into a link changes top margin
+    }
+  }
   mat-card-title {
     a {
       text-decoration: none;
