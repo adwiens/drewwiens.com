@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: './articles/articles.module#ArticlesModule',
     canActivate: [ MetaGuard ],
     data: {
-      meta: { title: 'Articles and Papers | Andy Wiens' },
+      meta: { title: 'Andrew Wiens - Articles and Papers' },
     },
   },
   {
@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: './videos/videos.module#VideosModule',
     canActivate: [ MetaGuard ],
     data: {
-      meta: { title: 'Videos | Andy Wiens' },
+      meta: { title: 'Andrew Wiens - Videos' },
     },
   },
   {
@@ -25,7 +25,7 @@ const routes: Routes = [
     loadChildren: './speaking/speaking.module#SpeakingModule',
     canActivate: [ MetaGuard ],
     data: {
-      meta: { title: 'Speaking | Andy Wiens' },
+      meta: { title: 'Andrew Wiens - Speaking' },
     },
   },
   {
@@ -33,7 +33,7 @@ const routes: Routes = [
     loadChildren: './teaching/teaching.module#TeachingModule',
     canActivate: [ MetaGuard ],
     data: {
-      meta: { title: 'Teaching | Andy Wiens' },
+      meta: { title: 'Andrew Wiens - Teaching' },
     },
   },
   {
@@ -41,7 +41,7 @@ const routes: Routes = [
     loadChildren: './links/links.module#LinksModule',
     canActivate: [ MetaGuard ],
     data: {
-      meta: { title: 'Links | Andy Wiens' },
+      meta: { title: 'Andrew Wiens - Links' },
     },
   },
 ];

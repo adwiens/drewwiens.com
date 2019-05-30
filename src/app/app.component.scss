@@ -2,18 +2,23 @@
 // https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
 .header {
   mat-toolbar-row {
+    font-size: 16px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    .dev {
+    grid-template-columns: 1fr 500px 1fr;
+    .bold {
       font-weight: bold;
+    }
+    .light {
+      color: #a1aadd;
     }
     a {
       text-decoration: none;
       color: white;
     }
     .tabs {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 10px;
       a {
         color: #a1aadd;
       }
@@ -27,10 +32,17 @@
     }
     h1 {
       display: flex;
-      align-items: center;
-      mat-icon {
-        margin-right: 5px;
+      flex-direction: column;
+      flex-grow: 1;
+      .first-name {
+        margin-bottom: -5px;
       }
+      .role {
+        margin-top: -5px;
+      }
+    }
+    .mat-button {
+      font-size: 16px;
     }
   }
 }

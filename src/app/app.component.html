@@ -1,12 +1,21 @@
 <mat-toolbar color="primary" class="header">
   <mat-toolbar-row>
-    <a routerLink="/"><h1><mat-icon>person</mat-icon> an<span class="dev">dev</span></h1></a>
+    <a routerLink="/">
+      <h1>
+        <div class="first-name">
+          <span class="bold">An</span>
+          <span class="light" *ngIf="((count | async) % 2) !== 1; else ng">drew</span>
+          <ng-template #ng>
+            <span class="light">gular</span>
+          </ng-template>
+        </div>
+        <div class="role"><span class="bold">Dev</span><span class="light">eloper</span></div>
+      </h1>
+    </a>
     <nav class="tabs">
       <a mat-button routerLink="/videos" routerLinkActive="active">Videos</a>
       <a mat-button routerLink="/articles" routerLinkActive="active">Articles</a>
       <a mat-button routerLink="/speaking" routerLinkActive="active">Speaking</a>
-      <a mat-button routerLink="/teaching" routerLinkActive="active">Teaching</a>
-      <a mat-button routerLink="/links" routerLinkActive="active">Links</a>
     </nav>
     <nav class="links">
       <a mat-button href="http://www.github.com/adwiens">GitHub</a>
@@ -19,9 +28,9 @@
     <img src="assets/images/me.PNG">
     <span>
       My name is Andrew Wiens.
-      Software Developer at <a href="http://www.oasisdigital.com/">Oasis Digital</a>.
+      I'm a software developer and consultant at <a href="http://www.oasisdigital.com/">Oasis Digital Solutions</a>.
+      Electrical engineer.
       <a href="http://www.angularbootcamp.com/">Angular Boot Camp</a> instructor.
-      CS graduate student.
     </span>
   </div>
   <router-outlet></router-outlet>
@@ -36,6 +45,6 @@
       <a mat-button href="http://www.twitter.com/adwiens">Twitter</a>
       <a mat-button href="https://www.linkedin.com/in/andrew-wiens-59859038/">LinkedIn</a>
     </nav>
-    <span class="small">Powered by Angular Universal</span>
+    <span class="small">Powered by Angular Universal and Express</span>
   </mat-toolbar-row>
 </mat-toolbar>

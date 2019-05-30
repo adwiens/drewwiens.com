@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SpeakingComponent } from './speaking/speaking.component';
+import { MaterialModule } from '../material.module';
 
 const routes: Routes = [
   { path: '', component: SpeakingComponent, pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    MaterialModule,
   ]
 })
 export class SpeakingModule { }
