@@ -1,17 +1,6 @@
 <mat-toolbar color="primary" class="header">
   <mat-toolbar-row>
-    <a routerLink="/">
-      <h1>
-        <div class="first-name">
-          <span class="bold">An</span>
-          <span class="light" *ngIf="((count | async) % 2) !== 1; else ng">drew</span>
-          <ng-template #ng>
-            <span class="light">gular</span>
-          </ng-template>
-        </div>
-        <div class="role"><span class="bold">Dev</span><span class="light">eloper</span></div>
-      </h1>
-    </a>
+    <span>&nbsp;</span>
     <nav class="tabs">
       <a mat-button routerLink="/videos" routerLinkActive="active">Videos</a>
       <a mat-button routerLink="/articles" routerLinkActive="active">Articles</a>
@@ -45,6 +34,6 @@
       <a mat-button href="http://www.twitter.com/adwiens">Twitter</a>
       <a mat-button href="https://www.linkedin.com/in/andrew-wiens-59859038/">LinkedIn</a>
     </nav>
-    <span class="small">Powered by Angular Universal and Express</span>
+    <span class="small">Powered by Angular and Express</span>
   </mat-toolbar-row>
 </mat-toolbar>

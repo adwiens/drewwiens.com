@@ -11,18 +11,26 @@ interface Post {
 }
 
 @Component({
-  selector: 'andev-speaking',
+  selector: 'app-speaking',
   templateUrl: './speaking.component.html',
   styleUrls: ['./speaking.component.scss']
 })
 export class SpeakingComponent {
   posts: Post[] = [
     {
+      title: 'Full Stack Angular with NestJS',
+      date: 'Sep 28, 2019',
+      description: `Lightning talk at St. Louis DevFest 2019. An intro to using NestJS and
+      TypeScript to create amazing backends for Angular apps.`,
+      avatarFilename: 'angular-logo.png',
+      link: 'https://speakerdeck.com/adwiens/full-stack-angular-with-nestjs',
+    },
+    {
       title: 'Machine Learning for Front End Features',
       date: 'Mar 13, 2019',
       description: `Ideas for front-end machine learning features with Angular and TensorFlow.js.
       Two demo Angular apps using tfjs MobileNets, the Universal Sentence Encoder, and k-nearest
-      neighbors.`,
+      neighbors. Talks given at St. Louis Angular Lunch and COMO DevFest 2019.`,
       imageFilename: 'ml1.png',
       avatarFilename: 'tf-logo.png',
       link: 'https://www.youtube.com/watch?v=rGHF3D8YrD0',

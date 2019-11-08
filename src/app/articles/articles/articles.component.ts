@@ -9,15 +9,23 @@ interface Post {
 }
 
 @Component({
-  selector: 'andev-articles',
+  selector: 'app-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent {
   posts: Post[] = [
     {
+      title: 'Why You Should Try Ubuntu as Your Daily Driver OS',
+      date: 'Sep 15, 2019',
+      description: `Ubuntu LTS offers an excellent JavaScript/TypeScript developer experience and a
+      great on-ramp to Linux. This article is primarily about switching to Ubuntu from Windows 10.`,
+      avatarFilename: 'ubuntu-logo.png',
+      link: 'https://medium.com/@andywiens/why-you-should-try-ubuntu-again-5e8cb998c480'
+    },
+    {
       title: 'Build an API with Loopback 3, TypeScript, and Custom Connectors',
-      date: 'January 5, 2018',
+      date: 'Jan 5, 2018',
       description: `Recipes for converting a Loopback 3 CLI app to use TypeScript, and how to
       customize the framework with your own connectors.`,
       avatarFilename: 'loopback-logo.png',
@@ -25,7 +33,7 @@ export class ArticlesComponent {
     },
     {
       title: 'Improve the Runtime Performance of Angular Apps',
-      date: 'September 19, 2017',
+      date: 'Sep 19, 2017',
       description: `Strategies for increasing the runtime performance of Angular applications. A
       blog post in whitepaper format.`,
       avatarFilename: 'angular-logo.png',
@@ -33,7 +41,7 @@ export class ArticlesComponent {
     },
     {
       title: 'How to Learn Angular Without Web Development Experience',
-      date: 'September 16, 2017',
+      date: 'Sep 16, 2017',
       description: `Tips on how to learn Angular without experience with JavaScript or other
       front-end technologies.`,
       avatarFilename: 'angular-logo.png',

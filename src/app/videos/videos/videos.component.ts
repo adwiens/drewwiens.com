@@ -11,7 +11,7 @@ interface Post {
 }
 
 @Component({
-  selector: 'andev-videos',
+  selector: 'app-videos',
   templateUrl: './videos.component.html',
   styleUrls: ['./videos.component.scss']
 })
@@ -33,7 +33,7 @@ export class VideosComponent {
       date: 'Mar 13, 2019',
       description: `Ideas for front-end machine learning features with Angular and
       TensorFlow.js. Two Angular demos using MobileNets, the Universal Sentence Encoder, and
-      k-nearest neighbors from tfjs. Meetup talk.`,
+      k-nearest neighbors from tfjs. Talks given at St. Louis Angular Lunch and COMO DevFest 2019.`,
       imageFilename: 'ml1.png',
       avatarFilename: 'tf-logo.png',
       link: 'https://www.youtube.com/watch?v=rGHF3D8YrD0',
