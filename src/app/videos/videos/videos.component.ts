@@ -18,6 +18,15 @@ interface Post {
 export class VideosComponent {
   posts: Post[] = [
     {
+      title: 'GraphQL: What and Why',
+      date: 'Aug 20, 2020',
+      description: `Overview of GraphQL's features and a comparison with RESTful API's for
+      enterprise teams. Talk given at St. Louis Angular Lunch Meetup.`,
+      imageFilename: 'gqlww.png',
+      avatarFilename: 'graphql-logo.png',
+      link: 'https://www.youtube.com/watch?v=uhY81zcT8ns'
+    },
+    {
       title: 'Angular Reactive Forms',
       date: 'Apr 18, 2019',
       description: `In this video we look at a demo application on StackBlitz that is using Angular

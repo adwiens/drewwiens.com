@@ -18,10 +18,20 @@ interface Post {
 export class SpeakingComponent {
   posts: Post[] = [
     {
+      title: 'GraphQL: What and Why',
+      date: 'Aug 20, 2020',
+      description: `Overview of GraphQL's features and a comparison with RESTful API's for
+      enterprise teams. Talk given at St. Louis Angular Lunch Meetup.`,
+      imageFilename: 'gqlww.png',
+      avatarFilename: 'graphql-logo.png',
+      link: 'https://www.youtube.com/watch?v=uhY81zcT8ns'
+    },
+    {
       title: 'Full Stack Angular with NestJS',
       date: 'Sep 28, 2019',
       description: `Lightning talk at St. Louis DevFest 2019. An intro to using NestJS and
       TypeScript to create amazing backends for Angular apps.`,
+      imageFilename: 'fsngnest.png',
       avatarFilename: 'angular-logo.png',
       link: 'https://speakerdeck.com/adwiens/full-stack-angular-with-nestjs',
     },
