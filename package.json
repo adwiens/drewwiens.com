@@ -1,19 +1,11 @@
 {
-  "name": "andev",
+  "name": "drewwiens.com",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "lint": "ng lint ng-universal-demo",
-    "build:client-and-server-bundles": "ng build --prod && ng run ng-universal-demo:server:production",
-    "build:prerender": "yarn build:client-and-server-bundles && yarn compile:server && yarn generate:prerender",
-    "build:ssr": "yarn build:client-and-server-bundles && yarn compile:server",
-    "compile:server": "tsc -p server.tsconfig.json",
-    "generate:prerender": "cd dist && node prerender",
-    "serve:prerender": "cd dist/browser && http-server",
-    "serve:ssr": "node dist/server"
+    "build": "ng build"
   },
   "pre-commit": [],
   "private": true,
@@ -28,9 +20,6 @@
     "@angular/platform-browser-dynamic": "7.1.4",
     "@angular/platform-server": "7.1.4",
     "@angular/router": "7.1.4",
-    "@nguniversal/common": "6.0.0",
-    "@nguniversal/express-engine": "6.0.0",
-    "@nguniversal/module-map-ngfactory-loader": "6.0.0",
     "core-js": "2.4.1",
     "express": "4.15.2",
     "reflect-metadata": "0.1.10",
@@ -44,8 +33,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.11.4",
-    "@angular/cli": "7.1.4",
-    "@angular/compiler-cli": "7.1.4",
+    "@angular/cli": "10.0.7",
+    "@angular/compiler-cli": "10.0.11",
     "@angular/language-service": "7.1.4",
     "@types/node": "8.0.30",
     "codelyzer": "4.0.2",
