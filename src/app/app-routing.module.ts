@@ -1,47 +1,41 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MetaGuard } from '@ngx-meta/core';
 
 const routes: Routes = [
   { path: '', redirectTo: 'videos', pathMatch: 'full' },
   {
     path: 'articles',
-    loadChildren: './articles/articles.module#ArticlesModule',
-    canActivate: [ MetaGuard ],
+    loadChildren: () => import('./articles/articles.module').then(m => m.ArticlesModule),
     data: {
-      meta: { title: 'Andrew Wiens - Articles and Papers' },
+      meta: { title: 'Drew Wiens - Articles and Papers' },
     },
   },
   {
     path: 'videos',
-    loadChildren: './videos/videos.module#VideosModule',
-    canActivate: [ MetaGuard ],
+    loadChildren: () => import('./videos/videos.module').then(m => m.VideosModule),
     data: {
-      meta: { title: 'Andrew Wiens - Videos' },
+      meta: { title: 'Drew Wiens - Videos' },
     },
   },
   {
     path: 'speaking',
-    loadChildren: './speaking/speaking.module#SpeakingModule',
-    canActivate: [ MetaGuard ],
+    loadChildren: () => import('./speaking/speaking.module').then(m => m.SpeakingModule),
     data: {
-      meta: { title: 'Andrew Wiens - Speaking' },
+      meta: { title: 'Drew Wiens - Speaking' },
     },
   },
   {
     path: 'teaching',
-    loadChildren: './teaching/teaching.module#TeachingModule',
-    canActivate: [ MetaGuard ],
+    loadChildren: () => import('./teaching/teaching.module').then(m => m.TeachingModule),
     data: {
-      meta: { title: 'Andrew Wiens - Teaching' },
+      meta: { title: 'Drew Wiens - Teaching' },
     },
   },
   {
     path: 'links',
-    loadChildren: './links/links.module#LinksModule',
-    canActivate: [ MetaGuard ],
+    loadChildren: () => import('./links/links.module').then(m => m.LinksModule),
     data: {
-      meta: { title: 'Andrew Wiens - Links' },
+      meta: { title: 'Drew Wiens - Links' },
     },
   },
 ];
