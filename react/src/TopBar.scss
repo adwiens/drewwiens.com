@@ -1,0 +1,21 @@
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    a:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  
+  .right-nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .avatar {
+    background-color: transparent;
+  }
+}

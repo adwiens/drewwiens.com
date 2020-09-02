@@ -1,0 +1,31 @@
+@media only screen and (max-width: 768px) { .container { grid-template-columns: repeat(1, 1fr); } }
+@media only screen and (min-width: 768px) { .container { grid-template-columns: repeat(2, 1fr); } }
+@media only screen and (min-width: 992px) { .container { grid-template-columns: repeat(3, 1fr); } }
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  max-width: 1200px;
+  margin: 0px 30px 20px 30px;
+  .heading {
+    display: flex;
+    align-items: flex-start;
+    .title {
+      margin-left: 15px;
+      h2 {
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+    }
+    div.MuiAvatar-root {
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  div {
+    line-height: 1.25; // Line-height for the body text
+  }
+  div.mdc-card > a {
+    height: 100%; // Make ripple div fill the vertical space of the card
+  }
+}
