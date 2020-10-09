@@ -96,14 +96,6 @@ export const articles = [
     link: 'https://blog.oasisdigital.com/2017/angular-runtime-performance-guide/',
   },
   {
-    title: 'How to Learn Angular Without Web Development Experience',
-    date: 'Sep 16, 2017',
-    description: `Tips on how to learn Angular without experience with JavaScript or other
-    front-end technologies.`,
-    avatarFilename: 'angular-logo.png',
-    link: 'https://blog.oasisdigital.com/2017/angular-from-the-fire-hose/',
-  },
-  {
     title: 'Noninvasive Systems And Methods For Monitoring Health Characteristics',
     date: '2017',
     description: `US patent application for measuring heart timing with accelerometers worn or
